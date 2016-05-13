@@ -26,7 +26,7 @@ if %ERRORLEVEL% NEQ 0 goto:eof
 md %CD%\Vertical\
 md %CD%\Landscape\
 for /f "tokens=1-3 delims=+" %%A in ('identify -format "%%w+%%h+%%f\r\n" *.jpg') do (
-    do %%A,%%B,%%C
     if %%A GEQ %%B move %cd%\%%C %cd%\Landscape
     if %%A LEQ %%B move %cd%\%%C %cd%\Vertical
 )
+pauses

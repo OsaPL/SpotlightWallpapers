@@ -29,4 +29,3 @@ for /f "tokens=1-3 delims=+" %%A in ('identify -format "%%w+%%h+%%f\r\n" *.jpg')
     if %%A GEQ %%B move %cd%\%%C %cd%\Landscape
     if %%A LEQ %%B move %cd%\%%C %cd%\Vertical
 )
-pause
